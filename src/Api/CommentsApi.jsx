@@ -36,3 +36,13 @@ export const getComment = (async() => {
     },
   ];
 });
+
+export const createComment = (text,time,el) => { 
+  return {
+    id: Math.random().toString(36).substr(2, 9),
+    body: text,
+    author: el.author,
+    timestamp: time,
+    points:Math.floor(Math.random()*20)
+  };
+}
